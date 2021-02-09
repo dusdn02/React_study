@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from 'react';
 import PhoneForm from './component/PhoneForm'
 import PhoneInfoList from './component/PhoneInfoList';
@@ -75,3 +76,26 @@ class App extends Component {
 }
 
 export default App;
+=======
+import React, { Component } from 'react'
+
+class App extends Component{
+  state = {
+    count:0
+  }
+
+  countUp = ()=>{
+    this.setState({
+      count: this.state.count +1
+    })
+  }
+
+  render(){
+    return <div className="App">
+      <div>{this.state.count}</div>
+      <button onClick={this.countUp}>count up!</button>
+    </div>
+  }
+}
+export default App
+>>>>>>> a830db46c163ddee63b3477b0d85bf7b4790af57

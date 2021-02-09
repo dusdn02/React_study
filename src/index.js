@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //기본
 // import React from 'react';
 // import ReactDOM from 'react-dom';
@@ -71,3 +72,10 @@ ReactDOM.render(React.createElement(ExampleLayout, gridProps), contentDiv)
 // import App from './chart/App'
 
 // ReactDOM.render(<App />, document.getElementById('root'))
+=======
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+
+ReactDOM.render(<App />, document.getElementById('root'))
+>>>>>>> a830db46c163ddee63b3477b0d85bf7b4790af57
