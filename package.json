@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "hello-react",
   "version": "0.1.0",
   "private": true,
@@ -17,18 +16,6 @@
     "react-grid-layout": "^1.2.0",
     "react-scripts": "^4.0.1",
     "recoil": "^0.1.2",
-=======
-  "name": "hello",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.3",
-    "@testing-library/user-event": "^12.6.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
->>>>>>> a830db46c163ddee63b3477b0d85bf7b4790af57
     "web-vitals": "^0.2.4"
   },
   "scripts": {

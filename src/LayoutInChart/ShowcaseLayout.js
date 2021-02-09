@@ -75,10 +75,6 @@ export default class ShowcaseLayout extends React.Component {
                     Compaction type:{' '}
                     {_.capitalize(this.state.compactType) || 'No Compaction'}
                 </div>
-                <button onClick={this.onNewLayout}>Generate New Layout</button>
-                <button onClick={this.onCompactTypeChange}>
-                    Change Compaction Type
-                </button>
                 <ResponsiveReactGridLayout
                     {...this.props}
                     layouts={this.state.layouts}
@@ -119,7 +115,7 @@ function generateLayout(){
                 h:14,
                 i:i.toString()
             }
-        }
+        }//차트
         else{
             return{
                 x:(_.random(0, 5)*2)%12,
@@ -127,7 +123,6 @@ function generateLayout(){
                 w:2,
                 h:y,
                 i:i.toString()
-                // static: Math.random() < 0.05
             }
     }
     })
