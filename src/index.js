@@ -9,6 +9,7 @@ import Atom from './recoilTest/AtomFamily'
 import Selector from './recoilTest/Selector'
 import ShowcaseLayout from './ReactGridLayout/ShowcaseLayout'
 import Counter from './recoilTest/Counter'
+import TempCelsius from './recoilTest/Counter '
 import reportWebVitals from './reportWebVitals';
 
 const rootElement = document.getElementById("root");
