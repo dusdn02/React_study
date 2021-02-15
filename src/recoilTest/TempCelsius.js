@@ -1,4 +1,4 @@
-import { atom, selector, useRecoilState, DefaultValue } from 'recoil'
+import { RecoilRoot, atom, selector, useRecoilState, DefaultValue } from 'recoil'
 
 const tempFahrenheit = atom({
     key: 'tempFahrenheit',
