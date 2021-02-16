@@ -10,6 +10,7 @@ import Selector from './recoilTest/Selector'
 import ShowcaseLayout from './ReactGridLayout/ShowcaseLayout'
 import Counter from './recoilTest/Counter'
 import TodoList from './TodoList/App'
+import NameSelector from './recoilTest/NameSelector'
 import reportWebVitals from './reportWebVitals';
 import TodoListTemplate from './TodoList/components/TodoListTemplate';
 
@@ -17,7 +18,7 @@ const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
     <RecoilRoot>
-      <TodoList />
+      <NameSelector />
     </RecoilRoot>
   </React.StrictMode>,
   rootElement
