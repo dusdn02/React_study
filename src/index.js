@@ -1,28 +1,28 @@
 //기본
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { RecoilRoot} from 'recoil'
-import './index.css';
-import App from './App';
-import Animals from './recoilTest/Animals'
-import Atom from './recoilTest/AtomFamily'
-import Selector from './recoilTest/Selector'
-import ShowcaseLayout from './ReactGridLayout/ShowcaseLayout'
-import Counter from './recoilTest/Counter'
-import TodoList from './TodoList/App'
-import NameSelector from './recoilTest/NameSelector'
-import reportWebVitals from './reportWebVitals';
-import TodoListTemplate from './TodoList/components/TodoListTemplate';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import { RecoilRoot} from 'recoil'
+// import './index.css';
+// import App from './App';
+// import Animals from './recoilTest/Animals'
+// import Atom from './recoilTest/AtomFamily'
+// import Selector from './recoilTest/Selector'
+// import ShowcaseLayout from './ReactGridLayout/ShowcaseLayout'
+// import Counter from './recoilTest/Counter'
+// import TodoList from './TodoList/App'
+// import NameSelector from './recoilTest/NameSelector'
+// import reportWebVitals from './reportWebVitals';
+// import TodoListTemplate from './TodoList/components/TodoListTemplate';
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <React.StrictMode>
-    <RecoilRoot>
-      <Counter />
-    </RecoilRoot>
-  </React.StrictMode>,
-  rootElement
-);
+// const rootElement = document.getElementById("root");
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <RecoilRoot>
+//       <Counter />
+//     </RecoilRoot>
+//   </React.StrictMode>,
+//   rootElement
+// );
 
 //리액트 그리드 레이아웃
 // import React from 'react'
@@ -74,3 +74,14 @@ ReactDOM.render(
 // import App from './chart/App'
 
 // ReactDOM.render(<App />, document.getElementById('root'))
+
+//리덕스
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './reduxTest/App'
+import './index.css'
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+)
