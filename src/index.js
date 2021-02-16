@@ -18,7 +18,7 @@ const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
     <RecoilRoot>
-      <NameSelector />
+      <Counter />
     </RecoilRoot>
   </React.StrictMode>,
   rootElement
