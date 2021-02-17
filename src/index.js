@@ -76,20 +76,31 @@
 // ReactDOM.render(<App />, document.getElementById('root'))
 
 //리덕스
+// import React from 'react'
+// import ReactDOM from 'react-dom'
+// import App from './reduxTest/App'
+// import './index.css'
+
+// import { createStore } from 'redux'
+// import { Provider } from 'react-redux'
+// import reducers from './reduxTest/modules'
+
+// const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <App />
+//   </Provider>,
+//   document.getElementById('root')
+// )
+
+//주소록
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './reduxTest/App'
+import App from './App'
 import './index.css'
 
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
-import reducers from './reduxTest/modules'
-
-const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
-
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <App />,
   document.getElementById('root')
 )
