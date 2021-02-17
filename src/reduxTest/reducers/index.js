@@ -31,7 +31,7 @@ function counter(state = initialState, action) {
                 counters: [
                     ...counters.slice(0, action.index),
                     {
-                        ...counters[applicationCache.index],
+                        ...counters[action.index],
                         number: counters[action.index].number + 1
                     },
                     ...counters.slice(action.index + 1, counters.length)
