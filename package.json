@@ -19,6 +19,7 @@
     "react-scripts": "^4.0.1",
     "recoil": "^0.1.2",
     "redux": "^4.0.5",
+    "redux-actions": "^2.6.5",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
