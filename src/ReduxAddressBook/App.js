@@ -12,6 +12,7 @@ import FavoriteList from './components/FavoriteList';
 import oc from 'open-color';
 
 import shortid from 'shortid';
+import { connect } from 'react-redux';
 
 function generateRandomColor() {
     const colors = [
@@ -315,6 +316,8 @@ class App extends Component {
     }
 }
 
-
-
-export default App;
+export default connect(
+    (state) => ({
+        view: state.vase.get('view')
+    })
+)(App)
