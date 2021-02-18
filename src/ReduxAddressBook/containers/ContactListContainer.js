@@ -7,11 +7,17 @@ import * as modalActions from '../modules/modal'
 import * as contactsActions from '../modules/contacts'
 
 class ContactListContainer extends Component {
+
+    componentDidUpdate(prevProps, prevState){
+        if(prevProps.contact !== this.props.contacts){
+            localStorage.setItem('contacts', JSON.stringify(this.props.contacts))
+        }
+    }
     handleOpenModify = (id) => {
         const { contacts, ModalActions } = this.props
         const contact = contacts.find(contact => contact.get('id') === id)
 
-        modalActions.show({
+        ModalActions.show({
             mode: 'modify',
             contact: contact.toJS()
         })

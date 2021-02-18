@@ -5,6 +5,13 @@ const CREATE = 'contact/CREATE'
 const MODIFY = 'contact/MODIFY'
 const REMOVE = 'contact/REMOVE'
 const TOGGLE_FAVORITE = 'contact/TOGGLE_FAVORITE'
+const LOAD_CONTACTS = 'contact/LOAD_CONTACTS'
+
+export const create = createAction(CREATE)
+export const modify = createAction(MODIFY)
+export const remove = createAction(REMOVE)
+export const toggleFavorite = createAction(TOGGLE_FAVORITE)
+export const loadContacts = createAction(LOAD_CONTACTS)
 
 const initialState = List([
     Map({

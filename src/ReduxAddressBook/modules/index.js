@@ -1,4 +1,4 @@
-import { combineReducers, comvineReducers } from 'redux'
+import { combineReducers } from 'redux'
 
 import base from './base'
 import contacts from './contacts'

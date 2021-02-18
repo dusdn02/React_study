@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import oc from 'open-color';
 import PropTypes from 'prop-types';
 import Thumbnail from './Thumbnail';
-import StarIcon from 'react-icons/lib/md/star';
-import EditIcon from 'react-icons/lib/md/edit';
+import { Star, Edit } from 'material-react-icons'
 import ImmutablePropTypes from 'react-immutable-proptypes'
 
 
@@ -159,10 +158,10 @@ class ContactItem extends Component {
                 </Info>
                 <div className="actions">
                     <CircleButton className="favorite" active={favorite} onClick={() => onToggleFavorite(id)}>
-                        <StarIcon/>
+                        <Star/>
                     </CircleButton>
                     <CircleButton onClick={() => onOpenModify(id)}>
-                        <EditIcon/>
+                        <Edit/>
                     </CircleButton>
                 </div>
             </Wrapper>

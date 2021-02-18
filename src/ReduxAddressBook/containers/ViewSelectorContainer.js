@@ -20,4 +20,11 @@ class ViewSelectorContainer extends Component {
     }
 
 }
-export default ViewSelectorContainer
+export default connect(
+    (state) => ({
+        view: state.base.get('view')
+    }),
+    (dispatch) => ({
+        BaseActions: bindActionCreators(baseActions, dispatch)
+    })
+)(ViewSelectorContainer)
