@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import ContactItem from './ContactItem';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { transitions } from '../lib/style-utils';
+import ImmutablePropTypes from 'react-immutable-proptypes'
 
 const Wrapper = styled.div`
     margin-top: 1rem;
@@ -23,7 +24,15 @@ const Wrapper = styled.div`
 class ContactList extends Component {
 
     static propTypes = {
-        contacts: PropTypes.arrayOf(PropTypes.object),
+        contacts: ImmutablePropTypes.listOf(
+            ImmutablePropTypes.mapContains({
+                id: PropTypes.string,
+                name: PropTypes.string,
+                phone: PropTypes.string,
+                color: PropTypes.string,
+                favorite: PropTypes.bool
+            })
+        ),
         search: PropTypes.string, // 검색 키워드
         onToggleFavorite: PropTypes.func, // 즐겨찾기 토글
         onOpenModify: PropTypes.func // 수정 모달 띄우기
@@ -44,7 +53,7 @@ class ContactList extends Component {
                             ).map( // 컴포넌트로 매핑
                                 contact => (
                                     <ContactItem 
-                                        key={contact.id} 
+                                        key={contact.get('id')} 
                                         contact={contact}
                                         onOpenModify={onOpenModify}
                                         onToggleFavorite={onToggleFavorite}

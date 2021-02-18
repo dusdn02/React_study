@@ -100,7 +100,7 @@ import ReactDOM from 'react-dom'
 import App from './ReduxAddressBook/App'
 
 import  { createStore } from 'redux'
-import reducers from './modules'
+import reducers from './ReduxAddressBook/modules'
 import { Provider } from 'react-redux'
 import './index.css'
 
