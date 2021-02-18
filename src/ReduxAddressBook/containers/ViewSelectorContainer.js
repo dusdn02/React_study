@@ -20,3 +20,4 @@ class ViewSelectorContainer extends Component {
     }
 
 }
+export default ViewSelectorContainer

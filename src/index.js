@@ -97,7 +97,7 @@
 //주소록
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+import App from './ReduxAddressBook/App'
 
 import  { createStore } from 'redux'
 import reducers from './modules'

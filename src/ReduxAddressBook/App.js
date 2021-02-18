@@ -330,6 +330,8 @@ import { connect } from 'react-redux'
 import ViewSelectorContainer from './containers/ViewSelectorContainer';
 import InputContainer from './containers/InputContainer'
 import FavoriteListContainer from './containers/FavoriteListContainer'
+import FloatingButtonContainer from './containers/FloatingButtonContainer'
+import ContactModalContainer from './containers/ContactModalContainer'
 
 class App extends Component {
     render() {
@@ -350,8 +352,8 @@ class App extends Component {
                     {/* ContactListContainer */}
                 </Container>
 
-                {/* ContactModalContainer */}
-                {/* FloatingButtonContainer */}
+                <ContactModalContainer />
+                <FloatingButtonContainer/>
             </div>
         );
     }
