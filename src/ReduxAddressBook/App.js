@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import Container from './components/Container';
 import { connect } from 'react-redux'
-
+import * as contactsActions from './modules/contacts'
 import ViewSelectorContainer from './containers/ViewSelectorContainer';
 import InputContainer from './containers/InputContainer'
 import FavoriteListContainer from './containers/FavoriteListContainer'
 import FloatingButtonContainer from './containers/FloatingButtonContainer'
 import ContactModalContainer from './containers/ContactModalContainer'
 import ContactListContainer from './containers/ContactListContainer'
+import { bindActionCreators } from 'redux';
 
 class App extends Component {
     componentDidMount() {
@@ -25,17 +26,17 @@ class App extends Component {
         return (
             <div>
                 <Header/>
-                <ViewSelectorContainer />
+                <ViewSelectorContainer/>
                 <Container visible={view==='favorite'}>
-                    <FavoriteListContainer />
+                    <FavoriteListContainer/>
                 </Container>
                 <Container visible={view==='list'}>
-                    <InputContainer />
-                    <ContactListContainer />
+                    <InputContainer/>
+                    <ContactListContainer/>
                 </Container>
 
-                <ContactModalContainer />
-                <FloatingButtonContainer />
+                <ContactModalContainer/>
+                <FloatingButtonContainer/>
             </div>
         );
     }
@@ -44,5 +45,8 @@ class App extends Component {
 export default connect(
     (state) => ({
         view: state.base.get('view')
+    }),
+    (dispatch) => ({
+        ContactsActions: bindActionCreators(contactsActions, dispatch)
     })
 )(App);

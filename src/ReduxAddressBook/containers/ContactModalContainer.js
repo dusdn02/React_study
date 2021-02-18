@@ -26,11 +26,11 @@ class ContactModalContainer extends Component {
 
     handleAction = {
         create: () => {
-            const { contactsActions, modal } = this.props
+            const { ContactActions, modal } = this.props
             const { name, phone, color } = modal.get('contact').toJS()
             const id = shortid.generate()
 
-            contactsActions.create({
+            ContactActions.create({
                 id,
                 name,
                 phone,
@@ -41,10 +41,10 @@ class ContactModalContainer extends Component {
         },
 
         modify: () => {
-            const { contactsActions, modal } = this.props
+            const { ContactActions, modal } = this.props
             const { id, name, phone } = modal.get('contact').toJS()
 
-            contactsActions.modify({
+            ContactActions.modify({
                 id,
                 contact: {
                     name,
@@ -57,10 +57,10 @@ class ContactModalContainer extends Component {
     }
 
     handleRemove = () => {
-        const { contactsActions, modal } = this.props
+        const { ContactActions, modal } = this.props
         const id = modal.getIn(['contact', 'id'])
 
-        contactsActions.remove(id)
+        ContactActions.remove(id)
         this.handleHide()
     }
 

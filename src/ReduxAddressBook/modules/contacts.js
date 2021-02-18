@@ -1,4 +1,4 @@
-import { Map, List } from 'immutable'
+import { Map, List, fromJS } from 'immutable'
 import { createAction, handleActions } from 'redux-actions'
 
 const CREATE = 'contact/CREATE'
@@ -69,5 +69,8 @@ export default handleActions({
         const index = state.findIndex(contact => contact.get('id') === action.payload)
 
         return state.update(index, contact => contact.set('favorite', !contact.get('favorit')))
+    },
+    [LOAD_CONTACTS]: (state, action) => {
+        return fromJS(action.payload)
     }
 }, initialState)
