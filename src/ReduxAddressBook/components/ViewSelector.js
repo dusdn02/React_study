@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import oc from 'open-color';
 
-import StarIcon from 'react-icons/lib/md/star'
-import PeopleIcon from 'react-icons/lib/md/people'
+import StarIcon from 'react-icons/lib/md/star';
+import PeopleIcon from 'react-icons/lib/md/people';
+
 import PropTypes from 'prop-types';
 
 

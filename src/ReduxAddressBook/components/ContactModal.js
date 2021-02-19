@@ -5,7 +5,7 @@ import Modal from './Modal';
 import Thumbnail from './Thumbnail';
 import Input from './Input';
 
-import RemoveIcon from 'react-icons/lib/md/remove-circle'
+import RemoveIcon from 'react-icons/lib/md/remove-circle';
 
 import PropTypes from 'prop-types';
 

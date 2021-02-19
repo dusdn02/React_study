@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import FavoriteItem from './FavoriteItem';
 import PropTypes from 'prop-types';
-import ImmutablePropTypes from 'react-immutable-proptypes'
+import ImmutablePropTypes from 'react-immutable-proptypes';
 
 const Wrapper = styled.div`
     /* 레이아웃 */
@@ -39,7 +39,6 @@ FavoriteList.propTypes = {
             phone: PropTypes.string,
             color: PropTypes.string,
             favorite: PropTypes.bool
-
         })
     )
 };

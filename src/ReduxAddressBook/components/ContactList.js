@@ -8,14 +8,17 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 
 const Wrapper = styled.div`
     margin-top: 1rem;
+
     .contact-enter {
         animation: ${transitions.stretchOut} .15s linear;
         animation-fill-mode: forwards;
     }
+
     .contact-leave {
         animation: ${transitions.shrinkIn} .15s linear;
         animation-fill-mode: forwards;
     }
+
 `;
 
 class ContactList extends Component {
@@ -61,10 +64,10 @@ class ContactList extends Component {
                             
         return (
             <Wrapper>
-                <CSSTransitionGroup>
+                <CSSTransitionGroup
                         transitionName="contact"
                         transitionEnterTimeout={500}
-                        transitionLeaveTimeout={500}
+                        transitionLeaveTimeout={500}>
                 {contactList}
                 </CSSTransitionGroup>
             </Wrapper>

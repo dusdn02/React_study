@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import oc from 'open-color';
 import PropTypes from 'prop-types';
 import Thumbnail from './Thumbnail';
-import StarIcon from 'react-icons/lib/md/star'
-import EditIcon from 'react-icons/lib/md/edit'
-import ImmutablePropTypes from 'react-immutable-proptypes'
+import StarIcon from 'react-icons/lib/md/star';
+import EditIcon from 'react-icons/lib/md/edit';
+
+import ImmutablePropTypes from 'react-immutable-proptypes';
 
 
 const Wrapper = styled.div`
@@ -148,7 +149,7 @@ class ContactItem extends Component {
             onToggleFavorite
         } = this.props;
 
-        const { name, phone, favorite, id, color } = contact.toJS()
+        const { name, phone, favorite, id, color } = contact.toJS();
 
         return (
             <Wrapper>

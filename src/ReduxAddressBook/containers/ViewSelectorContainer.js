@@ -1,30 +1,27 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import * as baseActions from '../modules/base'
-import ViewSelector from '../components/ViewSelector'
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as baseActions from "../modules/base";
+import ViewSelector from "../components/ViewSelector";
 
 class ViewSelectorContainer extends Component {
-    handleSelect = (view) => {
-        const { BaseActions } = this.props
-        BaseActions.setView(view)
-    }
+  handleSelect = view => {
+    const { BaseActions } = this.props;
+    BaseActions.setView(view);
+  };
 
-    render() {
-        const { view } = this.props
-        const { handleSelect } = this
-    
-        return (
-            <ViewSelector selected={view} onSelect={handleSelect}/>
-        )
-    }
+  render() {
+    const { view } = this.props;
+    const { handleSelect } = this;
 
+    return <ViewSelector selected={view} onSelect={handleSelect} />;
+  }
 }
 export default connect(
-    (state) => ({
-        view: state.base.get('view')
-    }),
-    (dispatch) => ({
-        BaseActions: bindActionCreators(baseActions, dispatch)
-    })
-)(ViewSelectorContainer)
+  state => ({
+    view: state.base.get("view")
+  }),
+  dispatch => ({
+    BaseActions: bindActionCreators(baseActions, dispatch)
+  })
+)(ViewSelectorContainer);

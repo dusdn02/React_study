@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import PersonIcon from 'react-icons/lib/md/person'
-import ImmutablePropTypes from 'react-immutable-proptypes'
+import PersonIcon from 'react-icons/lib/md/person';
+import ImmutablePropTypes from 'react-immutable-proptypes';
 
 const Wrapper = styled.div`
     /* 레이아웃 */
@@ -50,7 +50,7 @@ const Phone = styled.div`
 
 
 const FavoriteItem = ({contact}) => {
-    const { color, name, phone } = contact.toJS()
+    const { color, name, phone } = contact.toJS();
     return (
         <Wrapper>
             <Box color={color}>
@@ -64,7 +64,7 @@ const FavoriteItem = ({contact}) => {
             </Box>
         </Wrapper>
     )
-}
+};
 
 FavoriteItem.propTypes = {
     contact: ImmutablePropTypes.mapContains({

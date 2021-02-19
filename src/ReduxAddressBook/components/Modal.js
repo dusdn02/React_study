@@ -97,10 +97,10 @@ class Modal extends Component {
         return (
             <div>
                 <Wrapper width={width}>
-                    <CSSTransitionGroup>
+                    <CSSTransitionGroup
                         transitionName="modal"
                         transitionEnterTimeout={500}
-                        transitionLeaveTimeout={500}
+                        transitionLeaveTimeout={500}>
                         {
                             /* visible 이 참일때만 ModalBox 보여줌 */
                             visible && (<ModalBox>{children}</ModalBox>)
