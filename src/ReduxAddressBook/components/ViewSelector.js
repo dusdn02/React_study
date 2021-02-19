@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import oc from 'open-color';
 
-import { Star, People } from 'material-react-icons'
+import StarIcon from 'react-icons/lib/md/star'
+import PeopleIcon from 'react-icons/lib/md/people'
 import PropTypes from 'prop-types';
 
 
@@ -95,13 +96,13 @@ const ViewSelector = ({selected, onSelect}) => (
                 selected={selected}
                 name="favorite" 
                 onSelect={onSelect}>
-                <Star/>
+                <StarIcon/>
             </Item>
             <Item 
                 selected={selected} 
                 name="list" 
                 onSelect={onSelect}>
-                <People/>
+                <PeopleIcon/>
             </Item>
         </ItemContainer>
         <Bar right={selected==='list'}/>

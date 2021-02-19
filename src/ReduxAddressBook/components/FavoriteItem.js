@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { Person } from 'material-react-icons'
+import PersonIcon from 'react-icons/lib/md/person'
 import ImmutablePropTypes from 'react-immutable-proptypes'
 
 const Wrapper = styled.div`
@@ -55,7 +55,7 @@ const FavoriteItem = ({contact}) => {
         <Wrapper>
             <Box color={color}>
                 <ThumbnailContainer>
-                    <Person/>
+                    <PersonIcon/>
                 </ThumbnailContainer>
                 <Info>
                     <Name>{name}</Name>

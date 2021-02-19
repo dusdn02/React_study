@@ -5,7 +5,7 @@ import Modal from './Modal';
 import Thumbnail from './Thumbnail';
 import Input from './Input';
 
-import {Remove} from 'material-react-icons'
+import RemoveIcon from 'react-icons/lib/md/remove-circle'
 
 import PropTypes from 'prop-types';
 
@@ -135,7 +135,7 @@ class ContactModal extends Component {
         return (
             <Modal visible={visible} onHide={onHide}>
                 <ThumbnailWrapper>
-                    <RemoveButton visible={mode==='modify'} onClick={onRemove}><Remove/></RemoveButton>
+                    <RemoveButton visible={mode==='modify'} onClick={onRemove}><RemoveIcon/></RemoveButton>
                     <Thumbnail size="8rem" color={color}/>
                 </ThumbnailWrapper>
                 <Form>

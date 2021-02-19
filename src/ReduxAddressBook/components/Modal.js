@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import onClickOutside from 'react-onclickoutside';
 import {media, transitions} from '../lib/style-utils';
-import {CSSTransition} from 'react-transition-group';
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
 import PropTypes from 'prop-types';
 
@@ -97,7 +97,7 @@ class Modal extends Component {
         return (
             <div>
                 <Wrapper width={width}>
-                    <CSSTransition>
+                    <CSSTransitionGroup>
                         transitionName="modal"
                         transitionEnterTimeout={500}
                         transitionLeaveTimeout={500}
@@ -105,7 +105,7 @@ class Modal extends Component {
                             /* visible 이 참일때만 ModalBox 보여줌 */
                             visible && (<ModalBox>{children}</ModalBox>)
                         }
-                    </CSSTransition>
+                    </CSSTransitionGroup>
                 </Wrapper>
             </div>
         );

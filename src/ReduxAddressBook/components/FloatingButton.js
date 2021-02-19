@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import oc from 'open-color';
 import PropTypes from 'prop-types';
-import { Add } from 'material-react-icons'
+import AddIcon from 'react-icons/lib/md/add'
 
 const Wrapper = styled.div`
     /* 레이아웃 */
@@ -47,7 +47,7 @@ const Wrapper = styled.div`
 
 const FloatingButton = ({onClick}) => (
     <Wrapper onClick={onClick}>
-        <Add/>
+        <AddIcon/>
     </Wrapper>
 );
 

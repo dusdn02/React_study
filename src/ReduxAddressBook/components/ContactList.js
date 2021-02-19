@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import ContactItem from './ContactItem';
-import {CSSTransition} from 'react-transition-group';
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { transitions } from '../lib/style-utils';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 
@@ -61,12 +61,12 @@ class ContactList extends Component {
                             
         return (
             <Wrapper>
-                <CSSTransition>
+                <CSSTransitionGroup>
                         transitionName="contact"
                         transitionEnterTimeout={500}
                         transitionLeaveTimeout={500}
                 {contactList}
-                </CSSTransition>
+                </CSSTransitionGroup>
             </Wrapper>
         );
     }

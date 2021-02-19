@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Person } from 'material-react-icons'
+import PersonIcon from 'react-icons/lib/md/person'
 import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
@@ -27,7 +27,7 @@ Wrapper.propTypes = {
 
 const Thumbnail = ({size, color}) => (
     <Wrapper size={size} color={color}>
-        <Person/>
+        <PersonIcon/>
     </Wrapper>
 );
 
